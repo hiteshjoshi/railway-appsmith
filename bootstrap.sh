@@ -16,9 +16,9 @@ function get_maximum_heap(){
 function start_applcation(){
     nginx
     if [[ ! -z ${maximum_heap} ]]; then
-        backend_start_command="java -Xmx${maximum_heap}m -Dserver.port=8080 -Djava.security.egd='file:/dev/./urandom' -jar server.jar"
+        backend_start_command="java -Xmx${maximum_heap}m -Dserver.port=5678 -Djava.security.egd='file:/dev/./urandom' -jar server.jar"
     else
-        backend_start_command="java -Dserver.port=8080 -Djava.security.egd='file:/dev/./urandom' -jar server.jar"
+        backend_start_command="java -Dserver.port=5678 -Djava.security.egd='file:/dev/./urandom' -jar server.jar"
     fi
     eval $backend_start_command
 }

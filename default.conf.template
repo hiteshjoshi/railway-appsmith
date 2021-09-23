@@ -42,15 +42,15 @@ server {
     }
 
     location /api {
-        proxy_pass http://0.0.0.0:8080;
+        proxy_pass http://0.0.0.0:5678;
     }
 
     location /oauth2 {
-        proxy_pass http://0.0.0.0:8080;
+        proxy_pass http://0.0.0.0:5678;
     }
 
     location /login {
-        proxy_pass http://0.0.0.0:8080;
+        proxy_pass http://0.0.0.0:5678;
     }
 
 }
