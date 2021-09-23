@@ -15,8 +15,8 @@ COPY default.conf.template /etc/nginx/conf.d/default.conf.template
 COPY bootstrap.sh /bootstrap.sh
 COPY analytics.sh /analytics.sh
 RUN chmod +x /analytics.sh
+RUN chmod +x /bootstrap.sh
 
 EXPOSE 80
 
-ENTRYPOINT [ "/bin/sh -c" ]
-CMD ["/bootstrap.sh"]
+ENTRYPOINT ["/bin/sh", "-c" , "/bootstrap.sh"]
