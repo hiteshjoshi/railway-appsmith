@@ -16,7 +16,7 @@ COPY bootstrap.sh /bootstrap.sh
 COPY analytics.sh /analytics.sh
 RUN chmod +x /analytics.sh
 
-EXPOSE ${PORT}
+EXPOSE 80
 
 ENTRYPOINT [ "/bin/sh -c" ]
 CMD ["/bootstrap.sh"]
